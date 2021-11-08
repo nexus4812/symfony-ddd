@@ -1,0 +1,9 @@
+{
+    "name": "my/symfony-ddd",
+    "autoload": {
+        "psr-4": {
+            "My\\SymfonyDdd\\": "src/"
+        }
+    },
+    "require": {}
+}

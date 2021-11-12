@@ -7,3 +7,7 @@ up:
 
 down:
 	docker-compose down
+
+schema-update:
+	docker exec -it guess /home/guess/bin/console doctrine:database:create --if-not-exists
+	docker exec -it guess /home/guess/bin/console doctrine:schema:update --force

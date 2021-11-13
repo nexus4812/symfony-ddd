@@ -5,9 +5,33 @@ namespace Guess\Domain\Player;
 
 use DateTimeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\UserInterface;
 
-class Player
+/**
+ * @method string getUserIdentifier()
+ */
+class Player implements UserInterface
 {
+
+    /**
+     * @return string[]
+     */
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
+    }
+
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
     private int $id;
     private string $username;
     private string $password;

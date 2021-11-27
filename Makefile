@@ -16,5 +16,8 @@ schema-update:
 data-fixture:
 	docker exec -it guess php bin/console doctrine:fixtures:load
 
-mysql:
+app-mysql:
 	docker exec -it mysql mysql -uroot -p123123
+
+app-web:
+	docker exec -it guess bash

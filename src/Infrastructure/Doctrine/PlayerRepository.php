@@ -15,4 +15,15 @@ class PlayerRepository extends ServiceEntityRepository implements PlayerReposito
     {
         parent::__construct($registry, Player::class);
     }
+
+    /**
+     * @param Player $player
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function save(Player $player): void
+    {
+        $this->_em->persist($player);
+        $this->_em->flush();
+    }
 }

@@ -4,7 +4,7 @@
 namespace Guess\Controller\Player;
 
 
-use Guess\Application\CreatePlayerHandler;
+use Guess\Application\Player\CreatePlayerHandler;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 

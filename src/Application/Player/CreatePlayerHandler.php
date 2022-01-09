@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Guess\Application;
+namespace Guess\Application\Player;
 
 
 use Guess\Domain\Player\Player;
